@@ -59,7 +59,7 @@
 
 .first {
  display: flex;
- flex-direction: column;
+ flex-direction: row;
  align-items: center;
  text-align: center;
 }
@@ -68,11 +68,11 @@
   text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-.first img {
-  filter: drop-shadow(4px 6px 5px rgba(0, 0, 0, 0.3));
-  object-fit: contain;
+.first img{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-wrap: wrap;
 }
+
+
