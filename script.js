@@ -24,3 +24,4 @@ function showresult() {
     }
     document.getElementById("result").innerHTML = "You are <b>" + winner.toUpperCase() + "</b>!";
 }
+
