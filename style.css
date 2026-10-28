@@ -91,13 +91,7 @@
 }
 
 .box {
-  background-color: antiquewhite;
-  width: 90%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 3px solid navy;
-  border-radius: 20px;
+
 }
 
 .h1 {
@@ -106,6 +100,9 @@
 
 .question {
   text-align: left;
+  background-color: pink;
+  padding: 40px;
+  border-radius: 35px;
   margin-bottom: 20px;
 }
 
@@ -133,4 +130,10 @@ button {
   margin-top: 20px;
   font-size: 20px;
   color: #0096E0;
+}
+
+
+.heading {
+
+
 }
