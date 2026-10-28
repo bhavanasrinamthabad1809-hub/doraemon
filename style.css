@@ -48,22 +48,29 @@
  min-height: 400px;
  padding: 45px 30px;
  color: antiquewhite;
-
- display: flex;
- flex-wrap: wrap;
- justify-content: space-between;
- align-items: center;
- gap: 25px 10px;
 }
 
-.all > h1 {
-  width: 100%;
+.heading {
+  margin-bottom: 40px;
+  color: black;
+}
+
+.heading {
   font-size: 22px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.cartoon {
+  display:flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
 }
 
 .first {
- flex: 1 1 0;
+ flex: 1 ;
  min-width: 0;
  text-align: center;
 }
@@ -72,6 +79,7 @@
   colour: white;
   font-size: 14px;
   font-weight: bold;
+  line-height: 1.4;
 }
 
 .first img{
@@ -92,8 +100,8 @@
   border-radius: 20px;
 }
 
-h1 {
-  color: #0096E0;
+.h1 {
+  color: black;
 }
 
 .question {

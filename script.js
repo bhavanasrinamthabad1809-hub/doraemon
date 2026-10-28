@@ -7,7 +7,7 @@ function showresult() {
     var answers = document.querySelectorAll("input:checked");
 
     if (answers.length < 6) {
-        alert("please answer all 6 questions!");
+        alert(" yahh please answer all 6 questions!");
         return;
     }
 
@@ -22,6 +22,5 @@ function showresult() {
             winner = character;
         }    
     }
-    document.getElementById("result").innerHTML=
-    "you are <b> + winner.touppercase() + </b>!"
+    document.getElementById("result").innerHTML = "You are <b>" + winner.toUpperCase() + "</b>!";
 }
