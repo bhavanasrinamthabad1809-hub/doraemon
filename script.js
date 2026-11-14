@@ -25,3 +25,110 @@ function showresult() {
     document.getElementById("result").innerHTML = "You are <b>" + winner.toUpperCase() + "</b>!";
 }
 
+var gadgets = [
+    { name: "anywheredoor", img: "gadgets/anywheredoor.png" },
+    { name: "timemachine",  img: "gadgets/painting.jpg" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+    { name: "", img: "" },
+];
+
+function showList() {
+    var text = document.getElementById("search").value.toLowerCase();
+    var html = "";
+
+
+    if (text === "") {
+        document.getElementById("list").innerHTML = "";
+        return;
+    }
+
+    
+    for (var i = 0; i < gadgets.length; i++) {
+        if (gadgets[i].name.includes(text)) {
+            html += '<div class="item" onclick="pick(' + i + ')">' +
+                    '<img src="' + gadgets[i].img + '" width="150">' +
+                    '<p>' + gadgets[i].name + '</p></div>';
+        }
+    }
+
+    
+    if (html === "") {
+        html = "<p>NOBITHA SPOILED THAT GADGET!</p>";
+    }
+
+    document.getElementById("list").innerHTML = html;
+}
+
+function pick(i) {
+    document.getElementById("board").innerHTML +=
+        '<div class="item"><img src="' + gadgets[i].img + '" width="150">' +
+        '<p>' + gadgets[i].name + '</p></div>';
+}

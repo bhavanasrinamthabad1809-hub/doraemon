@@ -147,3 +147,19 @@ button {
   color: black;
   font-style: italic;
 }
+
+
+.item{
+  display: inline-block;
+  margin: 8px;
+  padding: 8px;
+  border: 2px solid navy;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.item img {
+  width: 80px;
+  display: block;
+}
