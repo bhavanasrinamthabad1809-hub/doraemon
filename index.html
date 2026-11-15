@@ -294,26 +294,25 @@
     <div id="board"></div>
   </div>
 </div>
-<div class="digicam">
-  <div class="cam-body">
-    <div class="screen">
-      <video id="cam" autoplay playsinline muted></video>
-      <img id="dora" src="group doraemon.png">
-      <span class="osd tl">48M</span>
-      <span class="osd tr" id="stamp"></span>
-      <span class="osd bl">MENU</span>
-    </div>
-  </div>
-  <div class="pad">
-    <button class="round" onclick="startcamera()">ON</button>
-    <button class="round shutter"onclick="takephoto()"></button>
-  </div>
-
-  <canvas id="photo" hidden></canvas>
-  <a id="download" download="me-with-doraemon.png">download photo</a>
 </div>
-<div class="fish-back"></div>
-<div class="fish-front"></div>
+<div class="digicam">
+    <div class="cam-body">
+      <div class="screen">
+        <video id="cam" autoplay playsinline muted></video>
+        <img id="dora" src="group doraemon.png">
+        <span class="osd tl">48M</span>
+        <span class="osd tr" id="stamp"></span>
+        <span class="osd bl">MENU</span>
+        <span class="osd br">100%</span>
+        <div class="flash" id="flash"></div>
+      </div>
+<div class="pad">
+  <button class="cam-btn" onclick="startCamera()">ON</button>
+  <button class="cam-btn shutter" onclick="takePhoto()">cheese</button>
+</div>
+    <canvas id="photo" hidden></canvas>
+    <a id="download" download="me-with-doraemon.png">download photo</a>
+  </div>
 <script src="script.js"></script>
 </body>
 </html>

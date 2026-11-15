@@ -76,6 +76,16 @@ function pick(i) {
         '<div class="item"><img src="' + gadgets[i].img
         '<p>' + gadgets[i].name + '</p></div>';
 }
+
+
+
+
+
+
+/* ---------- CAMERA ---------- */
+document.getElementById("stamp").textContent =
+    new Date().toLocaleDateString("en-GB").replaceAll("/", "-");
+
 function startCamera() {
     navigator.mediaDevices.getUserMedia({ video: true })
         .then(function (stream) {
@@ -91,30 +101,49 @@ function takePhoto() {
     var dora   = document.getElementById("dora");
     var canvas = document.getElementById("photo");
 
-    var w = video.videoWidth;
-    var h = video.videoHeight;
-    if (!w) { alert("Open the camera first!"); return; }
+    if (!video.videoWidth) { alert("Open the camera first!"); return; }
 
-    canvas.width = w;
-    canvas.height = h;
+    // flash effect
+    var flash = document.getElementById("flash");
+    flash.style.transition = "none";
+    flash.style.opacity = 1;
+    setTimeout(function () {
+        flash.style.transition = "opacity 0.4s";
+        flash.style.opacity = 0;
+    }, 50);
+
+    // canvas is 4:3, same shape as the camera screen
+    var cw = 960, ch = 720;
+    canvas.width = cw;
+    canvas.height = ch;
     var ctx = canvas.getContext("2d");
 
-    
+    // crop the video to 4:3 (same as object-fit: cover)
+    var vw = video.videoWidth, vh = video.videoHeight;
+    var s  = Math.max(cw / vw, ch / vh);
+    var sw = cw / s, sh = ch / s;
+    var sx = (vw - sw) / 2, sy = (vh - sh) / 2;
+
+    // draw the video, mirrored
     ctx.save();
-    ctx.translate(w, 0);
+    ctx.translate(cw, 0);
     ctx.scale(-1, 1);
-    ctx.drawImage(video, 0, 0, w, h);
+    ctx.drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch);
     ctx.restore();
 
-    
-    var dh = h * 0.6;
+    // draw Doraemon at the bottom right
+    var dh = ch * 0.6;
     var dw = dora.naturalWidth / dora.naturalHeight * dh;
-    ctx.drawImage(dora, w - dw - 10, h - dh, dw, dh);
+    ctx.drawImage(dora, cw - dw - 17, ch - dh, dw, dh);
+
+    // orange date stamp
+    ctx.font = Math.round(ch * 0.05) + "px monospace";
+    ctx.fillStyle = "#ffb347";
+    ctx.fillText(document.getElementById("stamp").textContent, 20, ch - 20);
 
     canvas.hidden = false;
     document.getElementById("download").href = canvas.toDataURL("image/png");
 }
-
 
 
 

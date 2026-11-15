@@ -218,35 +218,131 @@ button {
 }
 
 :root {
-  --blue: #0096e0;    
+  --blue: #0096e0;
   --sky: #8fdcff;
-  --red: #e8272a;     
-  --yellow: #ffd400;  
-  --pink: #ffbfcd;    
+  --red: #e8272a;
+  --yellow: #ffd400;
+  --pink: #ffbfcd;
 }
 
-#fish-back, #fish-front {
+
+body {
+  margin: 0;
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(180deg, var(--sky) 0%, #e6f7ff 60%, #fff 100%);
+  background-attachment: fixed;
+}
+
+body::before {                      
+  content: "";
   position: fixed;
   inset: 0;
-  overflow: hidden;
+  background-image: radial-gradient(white 3px, transparent 3px);
+  background-size: 40px 40px;
+  opacity: 0.5;
+  z-index: -2;
   pointer-events: none;
 }
 
-#fish-back {z-index: -1;}
-#fish-front {z-index: 9999;}
+h1 {
+  font-style: normal;
+  color: var(--blue);
+  text-shadow: 3px 3px 0 white, 5px 5px 0 var(--yellow);
+}
 
-.fish {
+button {
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 5px 0 #006fa8;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+button:hover  { transform: translateY(-3px); }
+button:active { transform: translateY(3px); box-shadow: 0 2px 0 #006fa8; }
+
+
+
+
+.digicam {
+  display: inline-block;
+  transform: rotate(-2deg);
+  margin-top: 400px;
+}
+
+.cam-body {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  background: linear-gradient(145deg, #ffd3e0, #f5a9c0);
+  padding: 22px;
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25),
+              inset 0 3px 6px rgba(255,255,255,0.6);
+}
+
+.screen {
+  position: relative;
+  width: 560px;
+  aspect-ratio: 4 / 3;
+  background: #000;
+  border: 8px solid #e68aa8;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+#cam {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+  filter: saturate(1.2) contrast(1.05);
+}
+
+#dora {
   position: absolute;
-  top: -10vh;
-  animation: fall linear infinite, sway ease-in-out infinite alternate;
+  right: 10px;
+  bottom: 0;
+  height: 60%;
 }
 
+.osd {
+  position: absolute;
+  color: #fff;
+  font-family: monospace;
+  font-size: 14px;
+  text-shadow: 0 0 4px #000;
+}
+.tl { top: 8px; left: 10px; }
+.tr { top: 8px; right: 10px; color: #ffb347; }
+.bl { bottom: 8px; left: 10px; background: #3cb043; padding: 1px 6px; border-radius: 3px; }
+.br { bottom: 6px; right: 10px; }
 
-@keyframes fall {
-  to { translate: 0 120vh; }
+.flash {
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
 }
 
-@keyframes sway {
-  from { transform: rotate(-25deg); }
-  to { transform: rotate(25deg); }
+.pad { display: flex; flex-direction: column; gap: 16px; }
+.round {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 18px;
+  background: radial-gradient(#fff, #ffc7d8);
+  color: #c2436b;
+  box-shadow: 0 4px 0 #d77c9b, inset 0 2px 4px #fff;
 }
+.shutter { background: radial-gradient(#ff8fb0, #e8527f); color: #fff; }
+
+#photo { width: 560px; display: block; margin-top: 12px; border-radius: 10px; }
+
