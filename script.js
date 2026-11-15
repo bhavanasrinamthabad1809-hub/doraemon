@@ -27,7 +27,7 @@ function showresult() {
 
 var gadgets = [
     { name: "anywheredoor", img: "gadgets/anywheredoor.png" },
-    { name: "timemachine",  img: "gadgets/copyrobot.png" },
+    { name: "copyrobot",  img: "gadgets/copyrobot.png" },
     { name: "bamboocapter", img: "gadgets/bamboocapter.png" },
     { name: "carpet", img: "gadgets/carpet.png" },
     { name: "telephone", img: "gadgets/telephone.png" },
@@ -37,22 +37,11 @@ var gadgets = [
     { name: "tunnel", img: "gadgets/tunnel.png" },
     { name: "obtainingbag", img: "gadgets/ObtainingBag.jpg" },
     { name: "sparepocket", img: "gadgets/sparepocket.png" },
-    { name: "timetravel", img: "gadgets/timetravelcarpet.png" },
+    { name: "carpet", img: "gadgets/timetravelcarpet.png" },
     { name: "flyingstick", img: "gadgets/flyingstick.png" },
     { name: "gloves", img: "gadgets/gloves.png" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" },
-    { name: "", img: "" }
+    { name: "smalllight", img: "gadgets/small light.jpg" },
+    { name: "biglight", img: "gadgets/small light.jpg" }
 ];
 
 function showList() {
@@ -84,6 +73,44 @@ function showList() {
 
 function pick(i) {
     document.getElementById("board").innerHTML +=
-        '<div class="item"><img src="' + gadgets[i].img + '" width="150">' +
+        '<div class="item"><img src="' + gadgets[i].img
         '<p>' + gadgets[i].name + '</p></div>';
+}
+function startCamera() {
+    navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+            document.getElementById("cam").srcObject = stream;
+        })
+        .catch(function () {
+            alert("Please allow camera access to take a photo!");
+        });
+}
+
+function takePhoto() {
+    var video  = document.getElementById("cam");
+    var dora   = document.getElementById("dora");
+    var canvas = document.getElementById("photo");
+
+    var w = video.videoWidth;
+    var h = video.videoHeight;
+    if (!w) { alert("Open the camera first!"); return; }
+
+    canvas.width = w;
+    canvas.height = h;
+    var ctx = canvas.getContext("2d");
+
+    
+    ctx.save();
+    ctx.translate(w, 0);
+    ctx.scale(-1, 1);
+    ctx.drawImage(video, 0, 0, w, h);
+    ctx.restore();
+
+    
+    var dh = h * 0.6;
+    var dw = dora.naturalWidth / dora.naturalHeight * dh;
+    ctx.drawImage(dora, w - dw - 10, h - dh, dw, dh);
+
+    canvas.hidden = false;
+    document.getElementById("download").href = canvas.toDataURL("image/png");
 }

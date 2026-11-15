@@ -127,7 +127,7 @@
   </label>
   <label>
     <input type="radio"name="q2" value="suneo">
-    Something fancy that I can brag about
+    Something fancy that I can talk about
   </label>
   <label>
     <input type="radio"name="q2" value="shizuka">
@@ -167,7 +167,7 @@
   </label>
   <label>
     <input type="radio" name="q3"value="dekisuki">
-    your top rank is confrimed
+    your top rank is conformed
   </label>
   <label>
     <input type="radio" name="q3"value="shizuka">
@@ -175,7 +175,7 @@
   </label>
   <label>
     <input type="radio" name="q3"value="dorami">
-    your sis is crying go
+    your sister is crying go
   </label>
 </div>
 
@@ -283,14 +283,27 @@
     <h1> name your favourtie gadgets i will give you </h1>
     <h6> secret:- i met doraemon </h6>
   </div>
+ <div class="content">
   <div class="round">
-    <img src="round2.png" width="300px" height="300px">
+    <img src="round2.png" width="300" height="300">
   </div>
   <div class="gadgets">
-  <input id="search" placeholder="search a gadget..." oninput="showList()">
-  <div id="list"></div>
-  <div id="board"></div>
+    <input id="search" placeholder="search a gadget..." oninput="showList()">
+    <div id="list"></div>
+    <div id="board"></div>
   </div>
+</div>
+<div class="camera-box">
+  <div class="stage">
+    <video id="cam" autoplay playsinline muted></video>
+    <img id="dora" src="group doraemon.png">
+  </div>
+
+  <button onclick="startCamera()">open camera</button>
+  <button onclick="takePhoto()">take photo</button>
+
+  <canvas id="photo" hidden></canvas>
+  <a id="download" download="me-with-doraemon.png">download photo</a>
 </div>
 <script src="script.js"></script>
 </body>

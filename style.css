@@ -163,3 +163,57 @@ button {
   width: 80px;
   display: block;
 }
+
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.round {
+  flex-shrink: 0;            
+}
+
+.gadgets {
+  flex: 1;                 
+}
+
+.gadgets .item img {
+  width: 350px;              
+  height: 350px;
+  object-fit: contain;       
+}
+
+.gadgets .item {
+  width: 380px;
+  text-align: center;
+}
+
+.gadgets .item p {
+  font-size: 24px;
+}
+
+.stage {
+  position: relative;       
+  width: 640px;
+}
+
+#cam {
+  width: 100%;
+  transform: scaleX(-1);  
+  background: #dd9190;
+}
+
+#dora {
+  position: absolute;
+  right: 10px;              
+  bottom: 0;
+  height: 60%;            
+}
+
+#photo {
+  width: 640px;
+  margin-top: 10px;
+}
+
