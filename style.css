@@ -217,3 +217,36 @@ button {
   margin-top: 10px;
 }
 
+:root {
+  --blue: #0096e0;    
+  --sky: #8fdcff;
+  --red: #e8272a;     
+  --yellow: #ffd400;  
+  --pink: #ffbfcd;    
+}
+
+#fish-back, #fish-front {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#fish-back {z-index: -1;}
+#fish-front {z-index: 9999;}
+
+.fish {
+  position: absolute;
+  top: -10vh;
+  animation: fall linear infinite, sway ease-in-out infinite alternate;
+}
+
+
+@keyframes fall {
+  to { translate: 0 120vh; }
+}
+
+@keyframes sway {
+  from { transform: rotate(-25deg); }
+  to { transform: rotate(25deg); }
+}

@@ -114,3 +114,7 @@ function takePhoto() {
     canvas.hidden = false;
     document.getElementById("download").href = canvas.toDataURL("image/png");
 }
+
+
+
+

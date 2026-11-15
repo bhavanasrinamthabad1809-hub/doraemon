@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
     <title>doraemon</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -293,18 +294,26 @@
     <div id="board"></div>
   </div>
 </div>
-<div class="camera-box">
-  <div class="stage">
-    <video id="cam" autoplay playsinline muted></video>
-    <img id="dora" src="group doraemon.png">
+<div class="digicam">
+  <div class="cam-body">
+    <div class="screen">
+      <video id="cam" autoplay playsinline muted></video>
+      <img id="dora" src="group doraemon.png">
+      <span class="osd tl">48M</span>
+      <span class="osd tr" id="stamp"></span>
+      <span class="osd bl">MENU</span>
+    </div>
   </div>
-
-  <button onclick="startCamera()">open camera</button>
-  <button onclick="takePhoto()">take photo</button>
+  <div class="pad">
+    <button class="round" onclick="startcamera()">ON</button>
+    <button class="round shutter"onclick="takephoto()"></button>
+  </div>
 
   <canvas id="photo" hidden></canvas>
   <a id="download" download="me-with-doraemon.png">download photo</a>
 </div>
+<div class="fish-back"></div>
+<div class="fish-front"></div>
 <script src="script.js"></script>
 </body>
 </html>
