@@ -168,15 +168,16 @@ button {
 .content {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 40px;                
 }
 
 .round {
-  flex-shrink: 0;            
+  flex-shrink: 0;
+  margin-right: 300px;                
 }
 
 .gadgets {
-  flex: 1;                 
+  flex: 1;              
 }
 
 .gadgets .item img {
@@ -271,7 +272,7 @@ button:active { transform: translateY(3px); box-shadow: 0 2px 0 #006fa8; }
 .digicam {
   display: inline-block;
   transform: rotate(-2deg);
-  margin-top: 400px;
+  margin-top: 300px;
 }
 
 .cam-body {
@@ -332,17 +333,4 @@ button:active { transform: translateY(3px); box-shadow: 0 2px 0 #006fa8; }
 }
 
 .pad { display: flex; flex-direction: column; gap: 16px; }
-.round {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  padding: 0;
-  font-size: 18px;
-  background: radial-gradient(#fff, #ffc7d8);
-  color: #c2436b;
-  box-shadow: 0 4px 0 #d77c9b, inset 0 2px 4px #fff;
-}
-.shutter { background: radial-gradient(#ff8fb0, #e8527f); color: #fff; }
-
-#photo { width: 560px; display: block; margin-top: 12px; border-radius: 10px; }
 
