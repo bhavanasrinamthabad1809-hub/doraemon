@@ -51,7 +51,7 @@ This is my favourite part. It's a pink digicam (the kind that gives photos a nos
 4. index.html     the photo booth page
 5. style.css      digicam styles
 6. round2.png     Doraemon picture
-7. gadgets/       gadget images
+7. gadgets       gadget images
 
 
 ##  Things I want to add next
@@ -64,6 +64,13 @@ This is my favourite part. It's a pink digicam (the kind that gives photos a nos
 ## images
 
 <img width="1130" height="690" alt="image" src="https://github.com/user-attachments/assets/99e2942a-ad53-4964-a1ed-0df8bdadab5e" />
+
+me yahh
+<img width="960" height="720" alt="me-with-doraemon (2)" src="https://github.com/user-attachments/assets/9ca5c905-2942-4c45-a841-90ba5e6ddde6" />
+
+my panda
+<img width="960" height="720" alt="me-with-doraemon (3)" src="https://github.com/user-attachments/assets/3ea026d2-3976-4a74-b137-b3bb8b69db15" />
+
 
 
 Thanks to Doraemon for being my childhood best friend, and to anyone who tries this website. If you take a photo with Doraemon, I hope it makes you smile.
