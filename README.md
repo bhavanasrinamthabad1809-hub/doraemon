@@ -63,10 +63,18 @@ This is my favourite part. It's a pink digicam (the kind that gives photos a nos
 
 ## images
 
+<img width="1355" height="845" alt="image" src="https://github.com/user-attachments/assets/2567555c-3c86-45d5-a2cb-cb08abb99f46" />
+
+
 <img width="1130" height="690" alt="image" src="https://github.com/user-attachments/assets/99e2942a-ad53-4964-a1ed-0df8bdadab5e" />
 
 my panda
 <img width="960" height="720" alt="me-with-doraemon (3)" src="https://github.com/user-attachments/assets/3ea026d2-3976-4a74-b137-b3bb8b69db15" />
+
+
+
+demo link:
+https://bhavanasrinamthabad1809-hub.github.io/doraemon/
 
 
 Thanks to Doraemon for being my childhood best friend, and to anyone who tries this website. If you take a photo with Doraemon, I hope it makes you smile.
