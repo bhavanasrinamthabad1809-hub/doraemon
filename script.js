@@ -80,9 +80,6 @@ function pick(i) {
 
 
 
-
-
-/* ---------- CAMERA ---------- */
 document.getElementById("stamp").textContent =
     new Date().toLocaleDateString("en-GB").replaceAll("/", "-");
 
@@ -112,31 +109,31 @@ function takePhoto() {
         flash.style.opacity = 0;
     }, 50);
 
-    // canvas is 4:3, same shape as the camera screen
+    
     var cw = 960, ch = 720;
     canvas.width = cw;
     canvas.height = ch;
     var ctx = canvas.getContext("2d");
 
-    // crop the video to 4:3 (same as object-fit: cover)
+    
     var vw = video.videoWidth, vh = video.videoHeight;
     var s  = Math.max(cw / vw, ch / vh);
     var sw = cw / s, sh = ch / s;
     var sx = (vw - sw) / 2, sy = (vh - sh) / 2;
 
-    // draw the video, mirrored
+    
     ctx.save();
     ctx.translate(cw, 0);
     ctx.scale(-1, 1);
     ctx.drawImage(video, sx, sy, sw, sh, 0, 0, cw, ch);
     ctx.restore();
 
-    // draw Doraemon at the bottom right
+    
     var dh = ch * 0.6;
     var dw = dora.naturalWidth / dora.naturalHeight * dh;
     ctx.drawImage(dora, cw - dw - 17, ch - dh, dw, dh);
 
-    // orange date stamp
+
     ctx.font = Math.round(ch * 0.05) + "px monospace";
     ctx.fillStyle = "#ffb347";
     ctx.fillText(document.getElementById("stamp").textContent, 20, ch - 20);
