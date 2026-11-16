@@ -76,6 +76,7 @@ my panda
 demo link:
 https://bhavanasrinamthabad1809-hub.github.io/doraemon/
 
+learnt so much of java 
 
 Thanks to Doraemon for being my childhood best friend, and to anyone who tries this website. If you take a photo with Doraemon, I hope it makes you smile.
 share me your pic .
