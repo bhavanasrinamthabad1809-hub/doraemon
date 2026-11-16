@@ -2,7 +2,7 @@
 
 
 
-Hiii! This is my little Doraemon website, made because I grew up watching  and never really stopped loving 
+Hiii! This is my little Doraemon website, made because I grew up watching  and never really stopped loving .
 Dorayaki, Nobita's zero marks, Shizuka's violin, all of it. I wanted to build something where you can step into Doraemon's world for a few minutes, so I did.
 
 
@@ -17,16 +17,16 @@ Answer a few questions like:
 - *"Your phone has one notification before the battery dies, what is it?"*
 - *"You get a secret power for one day, what do you pick?"*
 
-When you finish, press see my character and find out which Doraemon character you are. (Nobita-napper? Shizuka-sweetheart? Gian-singer? Suneo-show-off? Dorami-giver? You'll see 👀)
+When you finish, press see my character and find out which Doraemon character you are. (Nobita-napper? Shizuka-sweetheart? Gian-singer? Suneo-show-off? Dorami-giver? You'll see )
 
 ### 2.  The gadget search: name a gadget, get the gadget
 Doraemon's pocket has a gadget for everything, so I made a search box for it.
 - Type a gadget name like `anywheredoor` or `timemachine`
 - Only the gadgets that match your search show up, and nothing else
-- If the gadget isn't there, you get: **"NOBITHA SPOILED THAT GADGET!"** 😭
+- If the gadget isn't there, you get: **"NOBITHA SPOILED THAT GADGET!"** 
 
-### 3. 📸 The photo booth: take a picture with Doraemon
-This is my favourite part. It's a pink digicam (the kind that gives photos a nostalgic feel 🌸):
+### 3. The photo booth: take a picture with Doraemon
+This is my favourite part. It's a pink digicam (the kind that gives photos a nostalgic feel ):
 1. Press **ON** and allow the camera
 2. You'll see yourself on the digicam screen, with Doraemon standing right beside you
 3. Press the cheese !
@@ -45,13 +45,13 @@ This is my favourite part. It's a pink digicam (the kind that gives photos a nos
 ##  project files
 
 
-index.html     main page (quiz + gadget search)
-style.css      styles for the main page
-script.js      gadget search + quiz logic
-index.html     the photo booth page
-style.css      digicam styles
-round2.png     Doraemon picture
-gadgets/       gadget images
+1. index.html     main page (quiz + gadget search)
+2. style.css      styles for the main page
+3. script.js      gadget search + quiz logic
+4. index.html     the photo booth page
+5. style.css      digicam styles
+6. round2.png     Doraemon picture
+7. gadgets/       gadget images
 
 
 ##  Things I want to add next
@@ -59,12 +59,14 @@ gadgets/       gadget images
 - More gadgets (Bamboo-copter, Take-copter, Small Light, Translation Konjac... I have a long list 😅)
 - More quiz questions and more characters
 - Putting the gadgets you picked into your photo
-- Maybe a little dorayaki animation 
+- Maybe a little dorayaki animation
 
+## images
 
+<img width="1130" height="690" alt="image" src="https://github.com/user-attachments/assets/99e2942a-ad53-4964-a1ed-0df8bdadab5e" />
 
-##  Thank you
 
 Thanks to Doraemon for being my childhood best friend, and to anyone who tries this website. If you take a photo with Doraemon, I hope it makes you smile.
+share me your pic .
 
-*Made with 💙, a lot of dorayaki, and way too many browser tabs.*
+*Made with 💙
